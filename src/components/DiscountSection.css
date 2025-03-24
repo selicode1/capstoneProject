@@ -1,0 +1,66 @@
+.consumer-discount-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .consumer-discount-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .consumer-card {
+    position: relative;
+    width: 100%;
+    height: 16rem;
+    background-color: #f3f4f6; /* Tailwind's gray-100 */
+    overflow: hidden;
+  }
+  
+  .consumer-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .consumer-card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5); /* Tailwind's white/50 */
+  }
+  
+  .consumer-card-category {
+    font-size: 0.875rem; /* Tailwind's text-sm */
+    color: #4b5563; /* Tailwind's gray-600 */
+    margin-bottom: 0.25rem;
+  }
+  
+  .consumer-card-title {
+    font-size: 1.25rem; /* Tailwind's text-xl */
+    font-weight: 600;
+    color: #1f2937; /* Tailwind's gray-800 */
+  }
+  
+  .consumer-card-description {
+    font-size: 0.875rem; /* Tailwind's text-sm */
+    color: #374151; /* Tailwind's gray-700 */
+  }
+  
+  .consumer-shop-now {
+    margin-top: 0.5rem;
+    display: inline-block;
+    color: #047857; /* Tailwind's green-600 */
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .consumer-shop-now:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,102 @@
+/* Container */
+.agriculture-section {
+  background: #171717; /* Dark background */
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Text */
+.agriculture-text {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+/* Image Container (Original Version for Larger Screens) */
+.image-container1 {
+  width: 900px; /* Adjust as needed */
+  height: 800px;
+  position: relative;
+}
+
+/* Image Styling */
+.image {
+  position: absolute;
+  width: 400px; /* Ensuring uniform size */
+  height: 270px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Positions (Matching Your Design) */
+.img6 { top: 0; left:200px; z-index: 2; }
+.img7 { top: 100px; right: 0; z-index: 1; }
+.img3 { top: 160px; left: -70px; z-index: 2; }
+.img4 { bottom: 180px; right: 10px; z-index: 1; }
+.img5 { bottom: 130px; left: 160px; z-index: 3; }
+
+/* Decorative Dots */
+.decorative-dots {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 3px;
+  position: absolute;
+}
+
+.decorative-dots::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffffff 20%, transparent 20%);
+  background-size: 20px 20px;
+}
+
+.top-left { top: 8rem; left: 20px; }
+.bottom-right { bottom: 4rem; right: 4rem; }
+
+/* Hover Effect */
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Hide Carousel on Large Screens */
+.carousel-container {
+  display: none;
+}
+
+/* Responsive: For Small Screens (max-width: 600px) */
+@media (max-width: 1024px) {
+  /* Hide the Original Image Layout */
+  .image-container1 {
+    display: none !important;
+  }
+  
+  /* Show the Carousel Only */
+  .carousel-container {
+      display: block;
+      width: 80%;
+      margin: 0 0 3rem 0;
+  }
+  
+  .carousel-image {
+      width: 100%;
+      height: 300px; /* Adjust height as needed */
+      object-fit: cover;
+      border-radius: 15px;
+  }
+
+  .agriculture-section h2 {
+    font-size: 18px; /* Adjust to your desired size */
+    text-align: center;
+  }
+
+  .decorative-dots {
+    display: none;
+  }
+}

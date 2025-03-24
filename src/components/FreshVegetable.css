@@ -1,0 +1,167 @@
+/* Container */
+.consumer-vegetable-container {
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Title */
+.consumer-text-center {
+  text-align: center;
+}
+.consumer-title {
+  margin-bottom: 1.5rem;
+}
+.consumer-title{
+  font-size: 1.5rem; /* Tailwind's text-2xl */
+  font-weight: 600;  /* Tailwind's font-semibold */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Tailwind's space-x-2 */
+}
+.consumer-vegetable {
+  color: #d1d5db; /* Tailwind's text-gray-300 */
+}
+
+/* Grid */
+.consumer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; /* Tailwind's gap-6 */
+}
+@media (min-width: 640px) {
+  .consumer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .consumer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card */
+.consumer-vegetable-card {
+position: relative;
+  background-color: #fff; /* Tailwind's bg-gray-50 */
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.25rem; /* Tailwind's rounded */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Tailwind's shadow */
+  margin-bottom: 10px;
+}
+
+/* Arrow for Card 1 (Left Arrow) */
+.consumer-arrow-left{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #10b981; /* Tailwind's bg-green-500 */
+  color: white;
+  padding: 0.25rem; /* Tailwind's p-1 */
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+/* Arrow for Card 4 (Right Arrow) */
+.consumer-arrow-right{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #10b981;
+  color: white;
+  padding: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+/* SVG Arrow Icon */
+.consumer-arrow-icon {
+  width: 1rem;  /* Tailwind's w-4 */
+  height: 1rem; /* Tailwind's h-4 */
+}
+
+/* Image */
+.consumer-vegetable-image {
+  display: block;
+  margin: 0 auto; /* Tailwind's mx-auto */
+  height: 10rem; /* Tailwind's h-32 */
+  object-fit: contain; /* Tailwind's object-contain */
+}
+
+/* Product Title */
+.consumer-product-title {
+  margin-top: 0.5rem; /* Tailwind's mt-2 */
+  font-size: 0.875rem; /* Tailwind's text-sm */
+  font-weight: 600;
+  color: #1f2937; /* Tailwind's text-gray-800 */
+}
+
+/* Stars */
+.consumer-stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem; /* Tailwind's space-x-1 */
+  margin-top: 0.5rem;
+}
+.consumer-star-filled {
+  width: 1rem;
+  height: 1rem;
+  color: #facc15; /* Tailwind's text-yellow-400 */
+}
+.consumer-star-empty {
+  width: 1rem;
+  height: 1rem;
+  color: #facc15;
+  stroke: currentColor;
+  stroke-width: 2px;
+}
+
+/* Prices */
+.consumer-prices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Tailwind's space-x-2 */
+  margin-top: 0.5rem;
+}
+.consumer-price {
+  font-size: 1.125rem; /* Tailwind's text-lg */
+  font-weight: 600;
+  color: #1f2937;
+}
+.consumer-price-old {
+  font-size: 0.875rem; /* Tailwind's text-sm */
+  color: #9ca3af; /* Tailwind's text-gray-400 */
+  text-decoration: line-through;
+}
+
+
+@media screen and (max-width: 1080px) {
+  .consumer-vegetable-card {
+    padding: 1.5rem;
+  }
+  .consumer-vegetable-image {
+    height: 8rem; /* Tailwind's h-32 */
+  }
+  .consumer-product-title {
+    font-size: 1rem; /* Tailwind's text-lg */
+  }
+  .consumer-stars {
+    margin-top: 0.25rem;
+  }
+  .consumer-price {
+    font-size: 1.125rem; /* Tailwind's text-lg */
+  }
+  .consumer-price-old {
+    font-size: 0.875rem; /* Tailwind's text-sm */
+  }
+    
+  .consumer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,128 @@
+
+/* Donut Chart Card */
+.donut-card {
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Donut Chart */
+.donut-chart {
+    position: relative;
+    width: 350px;
+    height: 250px;
+}
+
+svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+/* Base Circle */
+.circle-bg {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 4;
+}
+
+/* Data Circles */
+.circle-expense {
+    fill: none;
+    stroke: #5c7c1c;
+    stroke-width: 4;
+    stroke-dasharray: 60 40;
+    stroke-dashoffset: 0;
+}
+
+.circle-income {
+    fill: none;
+    stroke: #8bc34a;
+    stroke-width: 4;
+    stroke-dasharray: 20 80;
+    stroke-dashoffset: -60;
+}
+
+.circle-total-sale {
+    fill: none;
+    stroke: #c8f860;
+    stroke-width: 4;
+    stroke-dasharray: 10 90;
+    stroke-dashoffset: -80;
+}
+
+.circle-refunded {
+    fill: none;
+    stroke: black;
+    stroke-width: 4;
+    stroke-dasharray: 5 95;
+    stroke-dashoffset: -90;
+}
+
+/* Donut Chart Text */
+.donut-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.donut-text p {
+    font-size: 12px;
+    color: #555;
+    margin: 0;
+}
+
+.donut-text h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: #333;
+}
+
+/* Chart Legend */
+.chart-legend {
+    display: grid;
+    grid-template-columns: 10rem 10rem;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: black;
+}
+
+.legend-box {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 5px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.income { background: #8bc34a; }
+.total-sale { background: #c8f860; }
+.expense { background: #5c7c1c; }
+.refunded { background: black; }
+
+/* View Report */
+.view-reports {
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.chart1{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

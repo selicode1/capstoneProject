@@ -1,0 +1,106 @@
+.navbar {
+    background: transparent !important;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white !important;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    opacity: 0.8;
+  }
+  
+  /* Glassmorphism Effect for Sign In Button */
+  .glass-button {
+    background: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(10px);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .glass-button:hover {
+    background: #C2FF0A;
+    color: black;
+  }
+  
+  /* Custom styling for navbar toggler icon */
+  .navbar-toggler-icon {
+    background-color: white;
+  }
+  
+  /* Optional: Adjust navbar items for smaller screens */
+  @media (max-width: 767px) {
+    .navbar-nav {
+      text-align: center;  /* Center links on small screens */
+    }
+  
+    .navbar-nav .nav-link {
+      font-size: 14px;
+      margin-right: 0; /* Adjust spacing */
+      margin-bottom: 10px; /* Add margin for spacing between items */
+    }
+  
+    .d-flex {
+      justify-content: center; /* Center the buttons on smaller screens */
+    }
+  }
+
+  /* Custom styling for the Font Awesome icon */
+.navbar-toggler {
+    font-size: 24px;  /* Adjust the icon size */
+    color: white;     /* Set the icon color */
+    cursor: pointer; /* Make the icon clickable */
+    border: none !important; 
+  }
+
+  
+  /* Font Awesome Icon */
+  .navbar-toggler {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -60%; /* Initially hidden off-screen */
+    width: 60%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1); /* Dark background for the sidebar */
+    transition: left 0.3s ease; /* Smooth transition for sliding effect */
+    padding-top: 60px; /* Space for the navbar */
+    z-index: 999; /* Ensure it's above other content */
+  }
+  
+  /* Sidebar links */
+  .sidebar .nav-item {
+    margin: 15px 0;
+  }
+  
+  .sidebar .nav-link {
+    color: white;
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  .sidebar .nav-link:hover{
+    color: rgb(0, 207, 0);
+  }
+  
+  /* When the sidebar is open, slide it in */
+  .sidebar.open {
+    left: 0; /* Move sidebar into view */
+  }
+  
+
+  

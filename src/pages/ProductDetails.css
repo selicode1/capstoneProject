@@ -1,0 +1,190 @@
+/* Container */
+.pd-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  @media (min-width: 768px) {
+    .pd-container {
+      grid-template-columns: 1fr 1fr; /* 2 columns: images on left, info on right */
+    }
+  }
+  
+  /* Left Section */
+  .pd-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pd-main-image {
+    width: 100%;
+    max-width: 700px;
+    object-fit: fill;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .pd-thumbnails {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .pd-thumbnails img {
+    width: 120px;
+    height: 120px;
+    object-fit: fill;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Right Section */
+  .pd-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .pd-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  .pd-rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  .pd-star {
+    width: 1rem;
+    height: 1rem;
+  }
+  .pd-star--filled {
+    color: #facc15; /* yellow-400 */
+  }
+  .pd-star--empty {
+    color: #d1d5db; /* gray-300 */
+  }
+  .pd-availability {
+    font-weight: 500;
+    color: #16a34a; /* green-600 */
+  }
+  .pd-availability span {
+    color: #16a34a;
+  }
+  .pd-price-range {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937; /* gray-800 */
+  }
+  .pd-stock-message {
+    color: #dc2626; /* red-600 */
+    font-weight: 500;
+  }
+  
+  /* Actions */
+  .pd-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+  }
+  .pd-size,
+  .pd-quantity {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .pd-size-select {
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  .pd-quantity input {
+    width: 60px;
+    padding: 0.3rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .pd-button-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .pd-button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .pd-button--cart {
+    background-color: #f59e0b; /* amber-500 */
+    color: #fff;
+  }
+  .pd-button--cart:hover {
+    background-color: #d97706; /* amber-600 */
+  }
+  .pd-button--shop {
+    background-color: #10b981; /* green-500 */
+    color: #fff;
+  }
+  .pd-button--shop:hover {
+    background-color: #059669; /* green-600 */
+  }
+  
+  /* Guaranteed SAFE Checkout */
+  .pd-safe-checkout p {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .pd-safe-icons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .pd-safe-icons img {
+    height: 20px;
+    object-fit: contain;
+  }
+  
+  /* Tabs Section */
+  .pd-tabs {
+    grid-column: 1 / -1; /* span entire row in the grid */
+    margin-top: 2rem;
+  }
+  .pd-tab-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .pd-tab-list li {
+    cursor: pointer;
+    font-weight: 500;
+    color: #6b7280; /* gray-500 */
+    position: relative;
+  }
+  .pd-tab-list li.active {
+    color: #000;
+    font-weight: 600;
+  }
+  .pd-tab-list li.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.6rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #000;
+  }
+  .pd-tab-content p {
+    line-height: 1.6;
+    color: #4b5563; /* gray-600 */
+  }
+  

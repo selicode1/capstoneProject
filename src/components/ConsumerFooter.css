@@ -1,0 +1,138 @@
+/* Footer Base */
+.consumer-foot-footer {
+    background-color: #111827; /* Tailwind bg-gray-900 */
+    color: #e5e7eb;            /* Tailwind text-gray-200 */
+    padding: 2rem 0;          /* py-8 */
+  }
+  
+  /* Container */
+  .consumer-foot-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 1rem;          /* px-4 */
+  }
+  
+  /* Grid Layout */
+  .consumer-foot-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;                /* gap-8 */
+  }
+  @media (min-width: 768px) {
+    .consumer-foot-grid {
+      grid-template-columns: repeat(6, 1fr); /* md:grid-cols-6 */
+    }
+  }
+  
+  /* Brand / Logo */
+  .consumer-foot-brand {
+    /* Additional styling if needed */
+  }
+  .consumer-foot-logo {
+    color: #10b981;           /* Tailwind text-green-500 */
+    font-size: 1.5rem;        /* text-2xl */
+    font-weight: bold;        /* font-bold */
+    margin-bottom: 1rem;      /* mb-4 */
+  }
+  
+  /* Section Headings */
+  .consumer-foot-heading {
+    color: #ffffff;           /* text-white */
+    font-weight: 600;         /* font-semibold */
+    font-size: 1rem;
+    margin-bottom: 0.75rem;    /* mb-3 */
+  }
+  
+  /* List Styling */
+  .consumer-foot-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .consumer-foot-list li + li {
+    margin-top: 0.5rem;       /* space-y-2 */
+  }
+  .consumer-foot-text-sm {
+    font-size: 0.875rem;      /* text-sm */
+  }
+  
+  /* Link Styling */
+  .consumer-foot-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  .consumer-foot-link:hover {
+    color: #f3f4f6;          /* hover:text-gray-100 */
+  }
+  .consumer-foot-link--green {
+    color: #10b981;          /* For specific green link */
+  }
+  .consumer-foot-link--green:hover {
+    color: #34d399;          /* hover:text-green-400 */
+  }
+  
+  /* Deals / Subscribe Section */
+  .consumer-foot-deals {
+    /* Optional margin-top if desired */
+
+  }
+  .consumer-foot-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;  
+    margin-top: 1rem;          /* space-y-3 */
+  }
+  .consumer-foot-input {
+    background-color: #1f2937;/* Tailwind bg-gray-800 */
+    font-size: 0.875rem;      /* text-sm */
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    color: inherit;
+  }
+  .consumer-foot-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #10b981; /* focus:ring-2 focus:ring-green-500 */
+  }
+  .consumer-foot-input::placeholder {
+    color: #9ca3af;          /* placeholder-gray-400 */
+  }
+  .consumer-foot-button {
+    background-color: #10b981; /* bg-green-500 */
+    color: #ffffff;
+    padding: 0.5rem 1rem;      /* py-2 px-4 */
+    border-radius: 0.25rem;
+    font-size: 0.875rem;      /* text-sm */
+    border: none;
+    cursor: pointer;
+  }
+  .consumer-foot-button:hover {
+    background-color: #059669; /* hover:bg-green-600 */
+  }
+  
+  /* Icons Row */
+  .consumer-foot-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;            /* space-x-2 */
+    margin-top: 1rem;         /* mt-4 */
+  }
+  .consumer-foot-icon {
+    background-color: #ffffff;
+    border-radius: 9999px;
+    padding: 0.5rem;
+    color: #10b981;
+  }
+  .consumer-foot-icon-svg {
+    width: 1.25rem;          /* w-5 */
+    height: 1.25rem;         /* h-5 */
+  }
+  
+  /* Icon Square Placeholders */
+  .consumer-foot-square {
+    background-color: #ffffff;
+    width: 1.25rem;          /* w-5 */
+    height: 1.25rem;         /* h-5 */
+    border-radius: 0.125rem;  /* rounded-sm */
+  }
+  

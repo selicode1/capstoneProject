@@ -1,0 +1,124 @@
+.consumer-section {
+    position: relative;
+    width: 100%;
+    padding: 4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #f0fff4, white, #f0fff4);
+  }
+  
+  @media (min-width: 768px) {
+    .consumer-section {
+      padding: 4rem 2rem;
+    }
+  }
+  
+  .consumer-container {
+    max-width: 80rem; /* Equivalent to max-w-7xl */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .consumer-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .consumer-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    order: 2;
+  }
+  
+  @media (min-width: 768px) {
+    .consumer-text-content {
+      order: 1;
+    }
+  }
+  
+  .consumer-highlight {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #059669; /* Tailwind's green-600 */
+  }
+  
+  .consumer-title-hero {
+    font-size: 1.875rem; /* 3xl */
+    font-weight: 800;
+    color: #1f2937; /* Tailwind's gray-800 */
+    line-height: 1.25;
+  }
+  
+  @media (min-width: 768px) {
+    .consumer-title-hero {
+      font-size: 3rem; /* 5xl */
+    }
+  }
+  
+  .consumer-title-hero span {
+    color: #059669; /* Green-600 */
+  }
+  
+  .consumer-description {
+    color: #4b5563; /* Gray-600 */
+    max-width: 25rem;
+  }
+  
+  .consumer-button {
+    background-color: #059669;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: max-content;
+  }
+  
+  .consumer-button:hover {
+    background-color: #047857;
+    transform: scale(1.05);
+  }
+  
+  .consumer-button:focus {
+    outline: 2px solid #059669;
+    outline-offset: 2px;
+  }
+  
+  .consumer-image-container {
+    display: flex;
+    justify-content: center;
+    order: 1;
+  }
+  
+  @media (min-width: 768px) {
+    .consumer-image-container {
+      justify-content: flex-end;
+      order: 2;
+    }
+  }
+  
+  .consumer-image {
+    width: 100%;
+    height: auto;
+    max-width: 20rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .consumer-image:hover {
+    transform: scale(1.05);
+  }
+  

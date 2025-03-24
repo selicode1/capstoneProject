@@ -1,0 +1,205 @@
+  .dash-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+  
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Metrics */
+  .metrics {
+    display: flex;
+    gap: 10px;
+  }
+
+
+  .amount{
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .trans-detail{
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .value{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .transactions-card {
+    padding: 20px;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+
+  .transactions-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .cards {
+    padding: 30px;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.267);
+  }
+
+  .sales{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .client{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .small {
+    flex: 1;
+  }
+  
+  .progress {
+    width: 100%;
+    height: 5px;
+    background: #fffF;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  .blue { background: #3366FF; width: 80%; }
+  .yellow { background: #FFD700; width: 50%; }
+  
+   .transaction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+  }
+
+  .trans-title{
+    margin-bottom: 1rem;
+  }
+  
+  .icn {
+    font-size: 20px;
+  }
+
+  .trans-info{
+    font-weight: bold;
+  }
+  
+  /* Transfer */
+  .transfer input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #ddd;
+  }
+
+  .transfer h3{
+    margin-bottom: 1rem;
+  }
+  
+  .transfer-btn {
+    width: 100%;
+    padding: 10px;
+    background: #00a81c;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .card-con {
+    position: relative;
+    width: 100%;
+    
+  }
+  
+  .card-stack {
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.267);
+    /* position: absolute; */
+  }
+  
+  .back-card {
+    background: white;
+    z-index: 1;
+    padding: 25px;
+  }
+
+  .chart-container{
+    height: 300px;
+    padding-bottom: 3rem;
+  }
+  
+
+  /* Export Card */
+.export-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.export-btn {
+  background: #047857;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.export-btn:hover {
+  background-color: #065f46;
+  transform: scale(1.05);
+}
+
+.graph-container{
+  display: flex;
+  gap: 20px;
+}
+
+.dash-contain {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+
+.left-side, .right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 3rem;
+}

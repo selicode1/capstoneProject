@@ -1,0 +1,151 @@
+.consumer-navbar-2 {
+    background-color: #111827;
+    color: white;
+    padding: 10px;
+  }
+  
+  .consumer-container-2 {
+    max-width: 1580px;
+    margin-inline: auto;
+    padding: 0 16px;
+  }
+  
+  .consumer-nav-content-2 {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .consumer-left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .consumer-category-group {
+    position: relative;
+  }
+  
+  .consumer-category-button {
+    background-color: #fff;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+
+  .consumer-dropdown-icon{
+    fill: currentColor;
+    width: 20px;
+    
+  }
+  
+  .consumer-category-text {
+    margin-right: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .consumer-dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    color: black;
+    width: 180px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .consumer-category-group:hover .consumer-dropdown-menu {
+    display: block;
+  }
+  
+  .consumer-dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .consumer-dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .consumer-dropdown-menu li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .consumer-desktop-nav {
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+    list-style: none;
+    color: #fff;
+  }
+
+  .consumer-desktop-nav li a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .consumer-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .consumer-hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .consumer-mobile-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .consumer-mobile-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .consumer-mobile-menu li {
+    padding: 10px;
+  }
+  
+  .consumer-status {
+    color: #28a745;
+  }
+
+  .consumer-right-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+
+  .consumer-username{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .consumer-user-icon{
+    width: 40px;
+    height: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .consumer-mobile-nav {
+      display: none;
+    }
+
+    .consumer-user-info{
+        display: none;
+    }
+    
+    
+  }

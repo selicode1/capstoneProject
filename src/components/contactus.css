@@ -1,0 +1,135 @@
+/* Base Styles */
+.contact {
+  background-color: white;
+  padding: 5rem 0;
+}
+
+/* Container: You can adjust the container max-width if needed */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header & Paragraph */
+h1.fw-normal {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p.lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Image Container */
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  position: relative;
+}
+
+/* Larger Image */
+.img1 {
+  width: 800px;
+  height: 500px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+/* Smaller Overlapping Image */
+.img2 {
+  width: 350px;
+  height: 500px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+/* Decorative Dots (Example styling) */
+.decorative-dots1 {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 3px;
+  position: absolute;
+}
+
+.decorative-dots1::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #01aa17 20%, transparent 20%);
+  background-size: 20px 20px;
+}
+
+/* Positions for decorative dots */
+.top-left1 {
+  top: -20px;
+  left: -20px;
+}
+.bottom-right1 {
+  bottom: -20px;
+  right: -20px;
+}
+
+/* ---------------------------- */
+/* Responsive Styles */
+/* ---------------------------- */
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+h1.fw-normal {
+  font-size: 2rem;
+}
+
+p.lead {
+  font-size: 1.1rem;
+}
+
+.image-container {
+  flex-direction: column;
+}
+
+.img1 {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+.img2 {
+  width: 80%;
+  height: auto;
+  max-width: 400px;
+  margin-top: 1rem;
+}
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+h1.fw-normal {
+  font-size: 1.75rem;
+}
+
+p.lead {
+  font-size: 1rem;
+}
+
+.image-container {
+  gap: 1rem;
+}
+
+.img1 {
+  max-width: 100%;
+  width: 100%;
+}
+
+.img2 {
+  max-width: 100%;
+  width: 100%;
+}
+}

@@ -1,0 +1,101 @@
+/* Checkout Container */
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .checkout-container {
+    grid-template-columns: 2fr 1fr; /* Form on left, Summary on right */
+  }
+}
+
+/* Left Section */
+.checkout-left {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Checkout Sections */
+.checkout-section {
+  margin-bottom: 1.5rem;
+}
+.checkout-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Input Groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Payment Options */
+.payment-options {
+  display: flex;
+  
+  gap: 0.5rem;
+}
+.payment-option {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/* Right Section: Order Summary */
+.checkout-right {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.summary-details p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+.summary-details .total {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Checkout Button */
+.checkout-button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: #047857;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.checkout-button:hover {
+    background-color: #065f46;
+  transform: scale(1.05);
+}

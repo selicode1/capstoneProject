@@ -1,0 +1,117 @@
+/* Selection Screen Container */
+.selection-screen {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back-button i {
+  font-size: 20px;
+  color: black;
+}
+
+/* Selection Cards Wrapper */
+.selection-container {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+/* Selection Cards */
+.selection-card {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  cursor: pointer;
+}
+
+.selection-card:hover {
+    scale: 1.05;
+    transition: ease-in-out 0.2s;
+}
+
+/* Image Styling */
+.selection-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid #a3e100;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Label */
+.label {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #a3e100;
+  color: black;
+  padding: 18px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/* Dotted Background */
+.selection-card::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #a3e100 20%, transparent 20%);
+    background-size: 20px 20px;
+    left: -30px;
+    top: -40px;
+  }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .selection-container {
+    flex-direction: column;
+    gap: 30px; /* Reduce gap for small screens */
+  }
+}
+
+
+@keyframes slideIn1 {
+  0% {
+    transform: translateX(100%); /* Start below */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateX(0); /* End position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.slide-in1 {
+  animation: slideIn1 0.5s ease-out forwards; /* Apply the animation */
+}
+
+@keyframes slideIn3 {
+  0% {
+    transform: translateX(-100%); /* Start below */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateX(0); /* End position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.slide-in3 {
+  animation: slideIn3 0.5s ease-out forwards; /* Apply the animation */
+}

@@ -1,0 +1,62 @@
+/* NavBar1.css */
+
+.consumer-navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .consumer-logo {
+    color: #047857; /* Green color */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 32px;
+    cursor: pointer;
+  }
+  
+  .consumer-search-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border: 1px solid #047857;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .consumer-search-input {
+    flex: 1;
+    padding: 8px 12px;
+    color: #047857;
+    border: none;
+    outline: none;
+  }
+  
+  .consumer-search-button {
+    background: none;
+    color: #047857;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .consumer-icons-container {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+  }
+  
+  .consumer-icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 16px;
+  }
+  
+  .consumer-icon {
+    width: 20px;
+    height: 20px;
+  }
+  

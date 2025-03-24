@@ -1,0 +1,46 @@
+.consumer-banner {
+    background-color: #f9fafb; /* Tailwind's gray-50 */
+    padding: 1.5rem 0;
+  }
+  
+  .consumer-banner-container {
+    max-width: 64rem; /* Tailwind's max-w-5xl */
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .consumer-banner-container {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  
+  .consumer-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .consumer-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #374151; /* Tailwind's gray-700 */
+  }
+  
+  .consumer-feature-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1f2937; /* Tailwind's gray-800 */
+  }
+  
+  .consumer-feature-description {
+    font-size: 0.875rem; /* Tailwind's text-sm */
+    color: #4b5563; /* Tailwind's gray-600 */
+  }
+  

@@ -1,0 +1,25 @@
+.dough-chart {
+    position: relative;
+    width: 350px;
+    height: 350px;
+  }
+  
+  /* Centered Text */
+  .chart-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .main-text {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .sub-text {
+    color: #bbbbbb;
+    font-size: 15px;
+  }
+  

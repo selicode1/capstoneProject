@@ -1,0 +1,136 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('/src/assets/farm1.jpg') no-repeat center center/cover;
+  }
+
+.farming {
+    color: #C2FF0A;
+}
+  
+  /* Dark Overlay */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+  
+  /* Ensures text & button stay visible */
+  .hero h1, .hero p, .hero button{
+    position: relative;
+    z-index: 2;
+  }
+
+  .explore {
+    z-index: 2;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    bottom: 5rem;
+    right: 10rem;
+    font-size: large;
+  }
+
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(100%); /* Start below */
+      opacity: 0; /* Invisible */
+    }
+    100% {
+      transform: translateX(0); /* End position */
+      opacity: 1; /* Fully visible */
+    }
+}
+  
+.slide-left {
+    animation: slideLeft 0.5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%); /* Start below */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateX(0); /* End position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.slide-right {
+  animation: slideRight 0.5s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(-100%); /* Start below */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateY(0); /* End position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.slide-up {
+  animation: slideup 0.5s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(100%); /* Start below */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateY(0); /* End position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.slide-down {
+  animation: slidedown 0.5s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+
+@keyframes slideIn1 {
+  0% {
+    transform: translateX(100%); /* Start below */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateX(0); /* End position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.slide-in1 {
+  animation: slideIn1 1s ease-out forwards; /* Apply the animation */
+}
+
+@keyframes slideIn2 {
+  0% {
+    transform: translateY(100%); /* Start below */
+    opacity: 0; /* Invisible */
+  }
+  100% {
+    transform: translateY(0); /* End position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.slide-in2 {
+  animation: slideIn2 1s ease-out forwards; /* Apply the animation */
+}

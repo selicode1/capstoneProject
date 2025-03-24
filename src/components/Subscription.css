@@ -1,0 +1,82 @@
+/* Subscription Section */
+.subscription-section {
+    background: #1a1a1a;
+    padding: 5% 0;
+    text-align: center;
+  }
+  
+  /* Title Styling */
+  .subscription-title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .dots {
+    letter-spacing: 3px;
+    color: #fff;
+  }
+  
+  /* Subscription Form */
+  .subscription-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Input Container (For Correct Positioning) */
+  .input-container {
+    position: relative;
+    width: 400px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Email Input */
+  .email-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 30px;
+    background: #d4d4d4;
+    outline: none;
+    padding-right: 100px; /* Ensure text does not overlap with button */
+  }
+  
+  /* Subscribe Button Inside Input */
+  .subscribe-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #d4ff00;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .subscribe-button:hover {
+    background: #c4ea00;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .input-container {
+      width: 80%;
+    }
+    .subscription-section {
+      padding: 10% 0;
+    }
+
+    .subscription-title {
+      font-size: 20px;
+    }
+    
+  }
+  

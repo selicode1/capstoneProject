@@ -1,0 +1,95 @@
+/* Container */
+.consumer-recent-container {
+    max-width: 80rem; /* Tailwind max-w-7xl */
+    margin: 0 auto;   /* mx-auto */
+    padding: 2rem 1rem; /* py-8 (2rem top/bottom) & px-4 (1rem left/right) */
+  }
+  
+  /* Section Heading */
+  .consumer-recent-text-center {
+    text-align: center;
+  }
+  .consumer-recent-mb-6 {
+    margin-bottom: 1.5rem; /* mb-6 */
+  }
+  .consumer-recent-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600;  /* font-semibold */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* space-x-2 */
+  }
+  .consumer-recent-text-gray {
+    color: #d1d5db; /* text-gray-300 */
+  }
+  
+  /* Grid */
+  .consumer-recent-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* grid-cols-1 */
+    gap: 1.5rem; /* gap-6 */
+  }
+  @media (min-width: 768px) {
+    .consumer-recent-grid {
+      grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 */
+    }
+  }
+  
+  /* Card */
+  .consumer-recent-card {
+    background-color: #ffffff; /* bg-white */
+    border-radius: 0.25rem; /* rounded */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow */
+    overflow: hidden; /* Ensure rounded top on image */
+  }
+  
+  /* Image */
+  .consumer-recent-image {
+    width: 100%; /* w-full */
+    height: 12rem; /* h-48 (12rem) */
+    object-fit: cover; /* object-cover */
+    border-top-left-radius: 0.25rem; /* rounded-t (top left) */
+    border-top-right-radius: 0.25rem; /* rounded-t (top right) */
+  }
+  
+  /* Card Body */
+  .consumer-recent-p-4 {
+    padding: 1rem; /* p-4 */
+  }
+  
+  /* Date & Comments */
+  .consumer-recent-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem; /* text-xs */
+    color: #6b7280; /* text-gray-500 */
+    margin-bottom: 0.5rem; /* mb-2 */
+  }
+  
+  /* Title */
+  .consumer-recent-text-lg {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+    color: #1f2937; /* text-gray-800 */
+    margin-bottom: 0.5rem; /* mb-2 */
+  }
+  
+  /* Description */
+  .consumer-recent-text-sm {
+    font-size: 0.875rem; /* text-sm */
+    color: #4b5563; /* text-gray-600 */
+    margin-bottom: 0.75rem; /* mb-3 */
+  }
+  
+  /* Link */
+  .consumer-recent-link {
+    color: #10b981; /* text-green-600 */
+    font-weight: 600; /* font-semibold */
+    text-decoration: none;
+  }
+  .consumer-recent-link:hover {
+    text-decoration: underline; /* hover:underline */
+  }
+  

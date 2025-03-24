@@ -1,0 +1,112 @@
+/* Product Grid Container */
+.consumer-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  /* Product Card */
+  .consumer-product-card {
+    position: relative;
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 300px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    
+  }
+  
+  .consumer-product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Discount Badge */
+  .consumer-discount-badge {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: green;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  /* Product Image */
+  .consumer-product-image {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 160px;
+    object-fit: contain;
+  }
+  
+  /* Product Name */
+  .consumer-product-name {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Star Rating Container */
+  .consumer-rating-container {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+  }
+  
+  /* Star Icons */
+  .consumer-star-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .consumer-star-filled {
+    color: #facc15; /* Gold */
+  }
+  
+  .consumer-star-empty {
+    color: #d1d5db; /* Gray */
+  }
+  
+  /* Price Section */
+  .consumer-prices {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  /* Current Price */
+  .consumer-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Old Price (strikethrough) */
+  .consumer-old-price {
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .consumer-products-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

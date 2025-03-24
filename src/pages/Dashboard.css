@@ -1,0 +1,472 @@
+.dash{
+    display: flex;
+    /* gap: 2rem; */
+    
+}
+
+.dashboard {
+    flex-grow: 1;
+    margin-block: 1.5rem;
+    padding-inline: 2rem;
+    height: 100vh;
+    margin-left: 250px; /* Shift content to the right, same as sidebar width */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    width: calc(100% - 250px); /* Prevents content from overlapping */
+}
+
+.dash-title {
+    font-weight: bold;
+}
+
+.dash-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.profile-header h3{
+  text-align: left;
+}
+
+.icon {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.ico{
+    font-size: 20px;
+    cursor: pointer;
+    color: #686868;
+}
+
+.welcome-card{
+    background: #fff;
+    /* background: #00a868; */
+    color: #047857;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid #ddd;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.search-top{
+  padding: 8px 40px 8px 10px;
+  border-radius: 0.8rem;
+  border: 1px solid #ddd;
+}
+
+.avatar2{
+  width: 70px;
+  height: 70px;
+  border-radius: 30%;
+  border: 2px solid #fff;
+  padding: 3px;
+}
+
+.user-profile{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  
+}
+
+.user-profile-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.role{
+  color: #cbffdc;
+  font-size: 1rem;
+}
+
+.user-name{
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-top:focus{
+  outline: none;
+}
+
+.welcome-card h2{
+  font-weight: bold;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20px;
+  }
+  
+  .left-panel {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .card {
+    padding: 20px;
+    border-radius: 2rem;
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.267); */
+    width: 100%;
+  }
+
+  .card-sale {
+    padding: 20px;
+    border-radius: 2rem;
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.267); */
+    width: 100%;
+  }
+  
+  .sales-card {
+    background-color: #007514;
+    color: white;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .sales-card h3{
+    font-size: 1.2rem;
+  }
+
+  .orders-card h3{
+    font-size: 1.2rem;
+  }
+
+  .recency{
+    font-weight: 200;
+  }
+
+  .stat-count{
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .cash-in-amount{
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .wallet-icon {
+    font-size: 2rem;
+  }
+
+  .orders-card {
+    background: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .right-panel {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .profile-card1 {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 2rem;
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #ddd;
+  }
+  
+  .chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#8bc34a 25%, #66bb6a 50%, #4caf50 75%, #d4e157 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .income { background: #8bc34a; }
+  .sale { background: #66bb6a; }
+  .expense { background: #4caf50; }
+  .refunded { background: #d4e157; }
+  
+  .profile-card1 {
+    text-align: center;
+    width: 25%;
+  }
+  
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    /* background: gray; */
+    margin: 15px auto;
+    border: 2px solid #047857;
+    padding: 3px;
+  }
+  
+  .view-report, .profile-card1 a {
+    display: block;
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .chart-area{
+    width: 50%;
+    padding: 20px;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.267); 
+  }
+  
+  .rating1{
+    text-align: left;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .profile-name{
+    font-weight: bold;
+  }
+
+  .profile-card1-footer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+  }
+
+  .rank-area{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .search-section{
+    display: flex;
+    gap: 20px;
+  }
+
+  .search-filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .search-box {
+    position: relative;
+  }
+  
+  .search-box input {
+    padding: 8px 75px 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+  }
+  
+  .filter-button {
+    display: flex;
+    align-items: center;
+    background-color: #00a82d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .filter-icon {
+    margin-left: 5px;
+  }
+  
+  .print-button {
+    display: flex;
+    align-items: center;
+    color: #00a81c;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .print-icon {
+    margin-right: 5px;
+  }
+
+
+
+  .profit-dashboard {
+    /* background-color: #007514; */
+    color: #000;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    border-radius: 2rem;
+    width: 25%;
+  }
+  
+  .profit-summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .profit-card {
+    background-color: #047857;
+    color: #fff;
+    padding: 15px;
+    border-radius: 1rem;
+    text-align: left;
+    width: 50%;
+  }
+  
+  .profit-icon {
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-block;
+  }
+  
+  .profit-card h2 {
+    margin: 5px 0;
+  }
+  
+  .profit-positive {
+    color: #00ff66;
+    font-size: 1rem;
+  }
+  
+  .profit-negative {
+    color: #ff4d4d;
+    font-size: 1rem;
+  }
+  
+  .profit-chart {
+    padding-bottom: 70px;
+    padding-top: 30px;
+    padding-inline: 30px;
+    background-color: #047857;
+    color: #fff;
+    height: 20rem; /* Fixed height */
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    margin-top: 20px;
+  }
+
+  .chart-profit{
+    border: 1px solid #ddd;
+    padding: 40px;
+  }
+  
+  .profit-chart h4 {
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .profit-chart h2 {
+    color: #00ff66;
+  }
+  
+
+
+  .sales-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 2rem;
+    width: 50%;
+    color: #000;
+    border: 1px solid #ddd;
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.267); */
+  }
+  
+  /* Chart Container */
+
+  
+
+  
+  
+  /* Sales Details Section */
+  .sales-details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+  }
+  
+  .sales-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .sales-amount {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .sales-list {
+    display: grid;
+    grid-template-columns: 10rem 10rem;
+    row-gap: 2rem;
+
+  }
+  
+  .sales-item {
+    display: grid;
+    grid-template-columns: 1rem 1rem;
+    align-items: center;
+    font-size: 15px;
+  }
+  
+  .color-box {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .sales-value {
+    margin-left: auto;
+    
+  }
+  

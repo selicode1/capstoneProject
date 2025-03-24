@@ -1,0 +1,52 @@
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css');
+
+/* @import "tailwindcss"; */
+
+/* Default Light Mode */
+body {
+    background-color: #f9f9f9;
+    /* color: #333;
+    transition: all 0.3s ease-in-out; */
+  }
+  
+  /* Dark Mode Styles */
+  /* body.dark {
+    background-color: #1a1a1a;
+    color: #fff;
+  } */
+  
+  /* Style table in dark mode */
+  /* body.dark .orders-container {
+    background-color: #222;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark table {
+    background-color: #333;
+    color: white;
+  }
+  
+  body.dark th {
+    background-color: #444;
+  }
+  
+  body.dark td {
+    border-color: #555;
+  } */
+  
+  /* Button styles */
+  /* .toggle-btn {
+    background-color: #444;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  body.dark .toggle-btn {
+    background-color: #eee;
+    color: #000;
+  } */
+  

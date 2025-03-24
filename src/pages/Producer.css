@@ -1,0 +1,100 @@
+
+.signup-container{
+  background-color: #fff;
+}
+  
+  /* Left Form Section */
+  .form-section {
+    background: #fff;
+    padding: 3rem;
+    position: relative;
+  }
+  
+  /* Back Button */
+  .back-btn {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .back-btn:hover{
+    color: #047857;
+  }
+  
+  /* Form Heading */
+  h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  
+  .highlight {
+    color: #047857;
+    font-weight: bold;
+  }
+
+  .sign-up {
+    background-color: #047857;
+    color: white;
+    font-size: 18px;
+    padding: 1rem;
+  }
+
+  .sign-up:hover{
+    background-color: #3c4d00;
+    color: white;
+  }
+  
+  /* Social Media Icons */
+  .social-login {
+    text-align: center;
+  }
+  
+  .or-text {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-icon {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .facebook {
+    color: #1877f2;
+  }
+  
+  .twitter {
+    color: #000;
+  }
+  
+  .instagram {
+    color: #e4405f;
+  }
+  
+  /* Right Section - Image */
+  .image-section {
+    background: url("/src/assets/Producer1.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  
+
+  .form-control{
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #047857;
+  }
+
+  .form-control:focus{
+    box-shadow: none;
+    border-color: #047857;
+  }

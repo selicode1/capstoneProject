@@ -1,0 +1,114 @@
+/* Banner Container */
+.consumer-banner-container {
+    padding: 32px;
+
+  }
+  
+  /* Left and Right Image Containers */
+  .consumer-banner-left-image,
+  .consumer-banner-right-image {
+    position: absolute;
+  }
+  
+  .consumer-banner-left-image {
+    left: 0;
+  }
+  
+  .consumer-banner-right-image {
+    right: 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (min-width: 768px) {
+    .consumer-banner-left-image,
+    .consumer-banner-right-image {
+      width: 160px;
+      height: 160px;
+    }
+  }
+  
+  /* Image Styling */
+  .consumer-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Content Container */
+  .consumer-banner-content {
+    position: relative;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 16px;
+    text-align: center;
+  }
+  
+  /* Offer Text */
+  .consumer-banner-offer-text {
+    color: #16a34a; /* Tailwind's green-600 */
+    font-weight: 600;
+  }
+  
+  /* Banner Title */
+  .consumer-banner-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937; /* Tailwind's gray-800 */
+    margin-top: 8px;
+  }
+  
+  /* Responsive Title */
+  @media (min-width: 640px) {
+    .consumer-banner-title {
+      font-size: 28px;
+    }
+  }
+  
+  /* Description */
+  .consumer-banner-description {
+    color: #4b5563; /* Tailwind's gray-600 */
+    margin-top: 8px;
+  }
+  
+  /* Button */
+  .consumer-banner-button {
+    margin-top: 16px;
+    background-color: #22c55e; /* Tailwind's green-500 */
+    color: white;
+    padding: 8px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button Hover */
+  .consumer-banner-button:hover {
+    background-color: #16a34a; /* Tailwind's green-600 */
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .consumer-banner-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .consumer-banner-content {
+      text-align: left;
+    }
+  
+    .consumer-banner-title {
+      font-size: 32px;
+    }
+  
+    .consumer-banner-description {
+      max-width: 400px;
+    }
+    .consumer-banner-left-image,
+    .consumer-banner-right-image {
+      display: none;
+    }
+  }
+  

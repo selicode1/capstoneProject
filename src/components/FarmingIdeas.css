@@ -1,0 +1,80 @@
+/* Farming Ideas Section */
+.farming-ideas-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+    gap: 3rem;
+    background: #fff;
+  }
+  
+  /* Text Container */
+  
+  .farming-title {
+    font-size: 36px;
+    color: #2a2a2a;
+  }
+  
+  .farming-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 15px;
+  }
+  
+  /* Image Container */
+  .hand-image-container1 {
+    max-width: 50%;
+  }
+  
+  .farming-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .farming-ideas-section {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 5%;
+      gap: 2rem;
+    }
+  
+    .text-container,
+    .hand-image-container1 {
+      max-width: 100%;
+    }
+  
+    .farming-title {
+      font-size: 28px;
+      
+    }
+  
+    .farming-description {
+      font-size: 14px;
+    }
+  
+    .farming-image {
+      max-width: 80%;
+  }
+  }
+  
+
+  @media (max-width: 768px) {
+    .farming-title {
+        font-size: 24px;
+    }
+
+    .farming-description {
+        font-size: 13px;
+    }
+
+    .farming-image {
+        max-width: 90%;
+        height: calc(40vh - 20px);
+    }
+}
