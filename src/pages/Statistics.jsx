@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar';
 import { Line, Pie, Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement, BarElement } from 'chart.js';
 import "./Statistics.css";
+import { useEffect, useState } from "react";
 
 // Register chart elements
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement, BarElement);
@@ -12,15 +13,82 @@ const generateRandomData = (length, min, max) => {
   return Array.from({ length }, () => Math.floor(Math.random() * (max - min + 1)) + min);
 };
 
-const moneyForm = generateRandomData(1, 500, 5000)[0].toLocaleString("en-US", {
+const moneyForm = generateRandomData(1, 500, 5000)[0].toLocaleString("gh-GH", {
   style: "currency",
-  currency: "USD",
+  currency: "GHS",
 });
 
-const totalOrders = generateRandomData(1, 500, 5000)[0].toLocaleString("en-US");
+
 
 
 export default function Statistics() {
+  const [revenue, setRevenue] = useState(null);
+  const [unrealizedProfit, setUnrealizedProfit] = useState(0);
+  const [pending, setPending] = useState(0);
+  const [delivered, setDelivered] = useState(0);
+  const [cancelled, setCancelled] = useState(0);
+  const [SalesCategories, setSales] = useState(0);
+  
+ 
+  const [error, setError] = useState(null);
+  const token = localStorage.getItem("token");
+
+  useEffect(() => {
+    if (!token) return;
+
+    async function fetchData() {
+      try {
+        const response = await fetch("http://192.168.9.90:8000/api/farmer/statistics", {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (!response.ok) throw new Error("Failed to fetch statistics data");
+
+        const data = await response.json();
+        console.log(data)
+        setRevenue(data.user_balance);
+        setUnrealizedProfit(data.unrealized);
+        if (data.order_types){
+          setPending(data.order_types.pending || 0)
+          setDelivered(data.order_types.delivered || 0)
+          setCancelled(data.order_types.cancelled || 0)
+          setTotalOrders(pending + delivered + cancelled)
+          setSales(data.salesCategory)
+        }
+        
+      } catch (err) {
+        setError(err.message);
+      }
+    }
+
+    fetchData();
+  }, [token]);
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Randomized Data
   const orderData = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
@@ -45,30 +113,44 @@ export default function Statistics() {
   };
 
   const orderStatusData = {
-    labels: ["Pending", "Processing", "Delivered", "Canceled"],
+    labels: ["Pending", "Delivered", "Canceled"],
     datasets: [
       {
-        data: generateRandomData(4, 5, 50), // Random order status counts
-        backgroundColor: ["#FFC107", "#17A2B8", "#28A745", "#DC3545"],
+        data: [pending, delivered, cancelled], // Random order status counts
+        backgroundColor: ["#FFC107", "#28A745", "#DC3545"],
       },
     ],
   };
 
   const orderStatusOptions = {
+    responsive: true, // ✅ Makes the chart responsive
+    maintainAspectRatio: false, // ✅ Allows it to adjust properly in different screen sizes
     plugins: {
       legend: {
         position: "right",
         labels: {
           usePointStyle: true,
           pointStyle: "circle",
+          font: {
+            size: 14, // ✅ Increases font size for better readability
+            weight: "bold",
+          },
+          color: "#333", // ✅ Sets legend text color
+          padding: 20, // ✅ Adds space between legend items
         },
       },
+    },
+    layout: {
+      padding: 15, // ✅ Adds some spacing around the chart
     },
   };
 
   const topSellingOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
+        display: false,
         position: "bottom",
         labels: {
           usePointStyle: true,
@@ -76,7 +158,23 @@ export default function Statistics() {
         },
       },
     },
+    scales: {
+      x: {
+        grid: {
+          display: false, // ✅ Removes gridlines on X-axis
+        },
+      },
+      y: {
+        grid: {
+          display: false, // ✅ Removes gridlines on Y-axis
+        },
+        ticks: {
+          beginAtZero: true, // ✅ Ensures the scale starts from zero
+        },
+      },
+    },
   };
+  
 
   const topSellingData = {
     labels: ["Product Sales"],
@@ -134,24 +232,26 @@ export default function Statistics() {
             <div className="metrics">
               <div className="card small moneyBox">
                 <h6>Total Revenue</h6>
-                <p className="value">{moneyForm}</p>
+                <p className="value">{(revenue || 0).toLocaleString("gh-GH", {style: "currency", currency: "GHS"})}</p>
                 <span>+{generateRandomData(1, 1, 20)[0]}% this month</span>
               </div>
-              
+
+
+              <div className="card small">
+                <h6>Unrealized Revenue</h6>
+                <p className="value">{(unrealizedProfit ?? 0).toLocaleString("gh-GH", { style: "currency", currency: "GHS" })}</p>
+                <span>+{generateRandomData(1, 1, 20)[0]}% this month</span>
+              </div>
+
               <div className="card small">
                 <h6>Total Orders</h6>
-                <p className="value">{totalOrders}</p>
+                <p className="value">{pending + delivered + cancelled}</p>
                 <span>
-                  Completed: {generateRandomData(1, 100, 500)[0]} | Pending: {generateRandomData(1, 50, 200)[0]} | Canceled: {generateRandomData(1, 10, 50)[0]}
+                  Completed: {delivered} | Pending: {pending} | Canceled: {cancelled}
                 </span>
               </div>
 
               
-
-              <div className="card small">
-                <h6>Top Customers</h6>
-                <p className="value">{generateRandomData(1, 5, 50)[0]}</p>
-              </div>
             </div>
 
             {/* Order Trends Graph */}
@@ -164,15 +264,16 @@ export default function Statistics() {
               {/* Orders by Status (Pie Chart) */}
               <div className="card chart-container">
                 <h3>Orders by Status</h3>
-                <Pie data={orderStatusData} options={orderStatusOptions} />
+                {/* Put an if statement here to show no data found  */}
+                <Pie  className='pieChart' data={orderStatusData} options={orderStatusOptions} />
               </div>
             </div>
 
             <div className='graph-container'>
               {/* Top-Selling Products (Bar Chart) */}
               <div className="card chart-container">
-                <h3>Top Selling Products</h3>
-                <Bar data={topSellingData} options={topSellingOptions} />
+                <h3>Top Selling Categories</h3>
+                <Bar className='chartCategories'  data={topSellingData} options={topSellingOptions} />
               </div>
 
               {/* Top Sales Months (Bar Chart) */}
@@ -190,12 +291,12 @@ export default function Statistics() {
               <h6>Notifications</h6>
               <div className="not-container">
                 <div className='me-box'>
-                  <h4>New Order</h4>
-                  <p>Hello Please You have recieved a new order in your email</p>
+                  <h4>Pending Orders</h4>
+                  <p>Hello You have 3 pending orders</p>
                 </div>
                 <div className='me-box'>
-                  <h4>New Order</h4>
-                  <p>Hello Please You have recieved a new order in your email</p>
+                  <h4>Cash In</h4>
+                  <p>Your Account has been credited with GHS24.00 from order 123122</p>
                 </div>
                 <div className='me-box'>
                   <h4>New Order</h4>

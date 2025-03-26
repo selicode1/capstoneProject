@@ -338,6 +338,10 @@
   margin-bottom: 2px; /* Reduce space under text */
 }
 
+.me-box:hover{
+  background: rgb(195, 201, 195);
+}
+
 .me-box:last-child::after {
   display: none; /* Remove separator from the last item */
 }
@@ -349,4 +353,13 @@
 .moneyBox{
   background: #027818;
   color: white;
+}
+
+.pieChart{
+  width: 100% !important;
+}
+
+.chartCategories{
+
+  height: 15rem !important;
 }

@@ -21,6 +21,32 @@ const Product = () => {
   //   },
   // ];
 
+
+  useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const token = localStorage.getItem("token"); 
+        if (!token) {
+          console.log("User not logged in");
+        }
+        const response = await fetch("http://192.168.9.90:8000/api/farmer/ordersPage", {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }); 
+        if (!response.ok) throw new Error("Failed to fetch orders");
+        const data = await response.json();
+        console.log(data)
+        setOrders(data);
+      } catch (error) {
+        console.error("Error fetching orders:", error);
+      }
+    };
+
+    fetchOrders();
+  }, []); // Empty dependency array ensures it runs once on mount
+
   const products = [
     "/src/assets/fam8.jpeg",
     "/src/assets/fam8.jpeg",
@@ -48,7 +74,7 @@ const Product = () => {
       <Sidebar />
       <div className="dashboard">
         <div className="dash-head">
-          <h1 className="dash-title">Product</h1>
+          <h1 className="dash-title">Orders Placed</h1>
           <div className="icon">
             <input type="text" placeholder="Search" className="search-top" />
             <i class="fi fi-rr-list ico"></i>
@@ -78,7 +104,7 @@ const Product = () => {
                       <td>
                         <div className="user-info">
                           <div className="user-dtl">
-                            <span>{order.name}</span>
+                            <span>{order.customer_name}</span>
                           </div>
                         </div>
                       </td>
@@ -87,11 +113,11 @@ const Product = () => {
                         <span
                           className={`status-dot ${order.statusColor}`}
                         ></span>
-                        {order.status}
+                        {order.order_status}
                       </td>
                       <td>{order.quantity}</td>
-                      <td>{order.date}</td>
-                      <td>{order.price}</td>
+                      <td>{order.order_date}</td>
+                      <td>{(order.total_price ?? 0).toLocaleString("gh-GH", { style: "currency", currency: "GHS" })}</td>
                       <td data-cell="Action">
                         <div className="action-menu">
                           <button className="menu-btn">•••</button>

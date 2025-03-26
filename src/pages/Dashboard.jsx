@@ -57,6 +57,7 @@ const Dashboard = () => {
         label: "Units Sold",
         data: [],
         backgroundColor: "#FF5733",
+        borderRadius: 10,
       },
     ],
   });
@@ -90,6 +91,8 @@ const Dashboard = () => {
 
   // Chart options for top selling chart
   const topSellingOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: "bottom",
@@ -97,6 +100,17 @@ const Dashboard = () => {
           usePointStyle: true,
           pointStyle: "circle",
         },
+      },
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        ticks: { color: "#ddd" },
+      },
+      y: {
+        grid: { display: false },
+        ticks: { color: "#ddd" },
+        beginAtZero: true,
       },
     },
   };
@@ -109,7 +123,7 @@ const Dashboard = () => {
         if (!token) {
           console.log("User not logged in");
         }
-        const response = await fetch("http://192.168.17.62:8000/api/farmer_dashboard", {
+        const response = await fetch("http://192.168.9.90:8000/api/farmer_dashboard", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
@@ -121,17 +135,21 @@ const Dashboard = () => {
           throw new Error("Failed to fetch dashboard data");
         }
         const data = await response.json();
-
+        console.log(data)
         // Update dashboard states with returned data
         setSales(data.Balance);
         setTotalOrders(data.total_Orders);
+        setOrders(data.order_details)
+        console.log(`amount made from sales ${sales}`)
         // Assuming newOrders and successfulOrders are returned or can be derived from Order_types
         // Here you can update them if needed:
-        if(data.Order_types) {
-          setNewOrders(data.Order_types.new || 0);
-          setSuccessfulOrders(data.Order_types.successful || 0);
-        }
+        // if(data.Order_types) {
+        //   setNewOrders(data.Order_types.new || 0);
+        //   // setSuccessfulOrders(data.Order_types.successful || 0);
+        // }
+        setNewOrders(data.NewOrders|| 0)
         setCustomersForWeek(data.Customers_for_week);
+        setSuccessfulOrders(data.succesfulOrders || 0)
 
         // Update profit chart data
         const profitLabels = Object.keys(data.Profit_chart).sort();
@@ -198,9 +216,9 @@ const Dashboard = () => {
           </div>
           <div className="rank-area">
             <div className="left-panel">
-              <div className="card orders-card">
+              <div className="card orders-card balance">
                 <h3>Sales</h3>
-                <p className="cash-in-amount">{sales}</p>
+                <p className="cash-in-amount">{sales.toLocaleString("gh-GH", { style: "currency", currency: "GHS" })}</p>
                 <p className="recency">Last month Order ↑</p>
               </div>
 
@@ -226,8 +244,8 @@ const Dashboard = () => {
             {/* Right Panel */}
             <div className="right-panel">
               <div className="sales-container">
-                {/* Top Selling Products Chart */}
-                <Bar data={topSellingData} options={topSellingOptions} />
+                <h4>Top Selling Products by Distribution</h4>
+                <Bar className="topSellingCont"  data={topSellingData} options={topSellingOptions} />
               </div>
 
               <div className="profit-dashboard">
@@ -244,7 +262,7 @@ const Dashboard = () => {
                     <i className="fi fi-rr-money"></i>
                     <p>Total Profit</p>
                     <p>
-                      ${sales} <span className="profit-positive">+0%</span>
+                      {sales.toLocaleString("gh-GH", {style: "currency", currency: "GHS"})} <span className="profit-positive">+0%</span>
                     </p>
                     <small>Weekly Profit</small>
                   </div>
@@ -295,11 +313,11 @@ const Dashboard = () => {
                 {orders.length > 0 ? (
                   orders.map((order) => (
                     <tr key={order.id}>
-                      <td>{order.name}</td>
+                      <td>{order.customer_name}</td>
                       <td>{order.product_name}</td>
                       <td>{order.quantity}</td>
-                      <td>{order.date}</td>
-                      <td>{order.price}</td>
+                      <td>{order.order_date}</td>
+                      <td>{order.total_price.toLocaleString("gh-GH", {style: "currency", currency: "GHS"})}</td>
                     </tr>
                   ))
                 ) : (
