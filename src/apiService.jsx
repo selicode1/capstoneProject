@@ -1,7 +1,7 @@
 // apiService.js
 export const fetchDashboardStats = async (user_id) => {
     try {
-      const response = await fetch(`http://192.168.32.233/api/farmer_dashboard/${user_id}`);
+      const response = await fetch(`http://192.168.9.90:8000/api/farmer_dashboard/${user_id}`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

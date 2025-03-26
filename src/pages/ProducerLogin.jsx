@@ -24,7 +24,7 @@ const ProducerLogin = () => {
     encodedData.append("password", formData.password);
 
     try {
-      const response = await fetch("http://192.168.17.62:8000/api/login", {
+      const response = await fetch("http://192.168.9.90:8000/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
