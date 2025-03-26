@@ -24,7 +24,7 @@ const ConsumerLogin = () => {
     encodedData.append("password", formData.password);
 
     try {
-      const response = await fetch("http://192.168.17.62:8000/api/login", {
+      const response = await fetch("https://agrilinkapi.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -40,7 +40,7 @@ const ConsumerLogin = () => {
         if (data.access_token) {
           localStorage.setItem("token", data.access_token);
           login(formData.username);
-          navigate("/dashboard");
+          navigate("/landing");
         } else {
           setError("Login successful but no token received.");
         }
@@ -73,8 +73,9 @@ const ConsumerLogin = () => {
             <div className="mb-5">
               <label className="form-label">Username</label>
               <input
-                type="email"
+                type="text"
                 className="form-control"
+                name="username"
                 value={formData.username}
                 onChange={handleChange}
                 required
@@ -86,6 +87,7 @@ const ConsumerLogin = () => {
               <input
                 type="password"
                 className="form-control"
+                name="password"
                 value={formData.password}
                 onChange={handleChange}
                 required

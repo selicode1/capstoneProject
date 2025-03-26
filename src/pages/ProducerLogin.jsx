@@ -24,7 +24,7 @@ const ProducerLogin = () => {
     encodedData.append("password", formData.password);
 
     try {
-      const response = await fetch("http://192.168.9.90:8000/api/login", {
+      const response = await fetch("https://agrilinkapi.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",

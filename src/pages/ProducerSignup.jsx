@@ -29,7 +29,7 @@ const ProducerSignup = () => {
     setLoading(true); // Disable button
   
     try {
-      const response = await fetch("http://192.168.9.90:8000/api/register", { 
+      const response = await fetch("https://agrilinkapi.onrender.com/api/register", { 
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -39,7 +39,7 @@ const ProducerSignup = () => {
       if (response.ok) {
         console.log("Signup Successful:", data);  
         navigate("/producerlogin");
-        alert("Signup Successful");  
+        alert("Signup Successful");
       }
        else {
         setError(data.detail || "Signup failed!");

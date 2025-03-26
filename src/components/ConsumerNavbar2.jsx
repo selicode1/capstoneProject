@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ConsumerNavbar2.css"; // Import the CSS file
+import { useAuth } from "../AuthContext";
 
 export default function ConsumerNavbar2() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const { user } = useAuth();
 
   return (
     <nav className="consumer-navbar-2">
@@ -50,7 +52,7 @@ export default function ConsumerNavbar2() {
                 <svg className="consumer-user-icon" viewBox="0 0 24 24">
                   <path d="M12 2C6.477 2 2 6.492 2 12.03c0 5.523 4.477 10 10 10 5.539 0 10.03-4.477 10.03-10C22.03 6.492 17.522 2 12 2zm0 3.5a3.001 3.001 0 110 6 3.001 3.001 0 010-6zm0 15.438c-2.488 0-4.67-1.258-6-3.165.03-1.993 4-3.088 6-3.088 1.989 0 5.97 1.095 6 3.088-1.33 1.907-3.512 3.165-6 3.165z" />
                 </svg>
-                <span>Guest</span>
+                <span>{user || "Guest"}</span>
               </div>
             </div>
 

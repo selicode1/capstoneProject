@@ -14,6 +14,7 @@ import './ConsumerLandingPage.css'; // Import CSS file
 
 export default function ConsumerLandingPage() {
   const [loading, setLoading] = useState(true);
+  // const { user } = useAuth();
 
   useEffect(() => {
     // Hide the spinner after 5 seconds

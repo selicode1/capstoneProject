@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Consumer.css";
 import { useNavigate } from "react-router-dom";
 
@@ -29,7 +29,7 @@ const ConsumerSignup = () => {
     setLoading(true); // Disable button
 
     try {
-      const response = await fetch("http://192.168.17.62:8000/api/register", {
+      const response = await fetch("https://agrilinkapi.onrender.com/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -62,12 +62,15 @@ const ConsumerSignup = () => {
             Signup As <span className="highlight">Consumer</span>
           </h2>
 
-          <form className="w-75" onSubmit={handleSubmit}>
+          <form className="w-75" 
+          onSubmit={handleSubmit}
+          >
             <div className="mb-5">
               <label className="form-label">Email</label>
               <input
                 type="email"
                 className="form-control"
+                name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -78,6 +81,7 @@ const ConsumerSignup = () => {
               <input 
               type="text" 
               className="form-control"
+              name="username"
               value={formData.username}
               onChange={handleChange}
               required
@@ -88,6 +92,7 @@ const ConsumerSignup = () => {
               <input 
               type="text" 
               className="form-control"
+              name="address"
               value={formData.address}
               onChange={handleChange}
               required
@@ -107,7 +112,7 @@ const ConsumerSignup = () => {
 
             {error && <p className="text-danger">{error}</p>}
 
-            
+
             <button
               type="submit"
               className="btn sign-up w-100 mt-3"

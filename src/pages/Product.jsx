@@ -8,18 +8,18 @@ const Product = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { user } = useAuth();
 
-  // const orders = [
-  //   {
-  //     id: 1,
-  //     name: "Mama",
-  //     product: "Tomatoes",
-  //     status: "New",
-  //     quantity: 10,
-  //     date: "May 2, 2024",
-  //     price: "235",
-  //     statusColor: "blue-product",
-  //   },
-  // ];
+  const orders = [
+    // {
+    //   id: 1,
+    //   name: "Mama",
+    //   product: "Tomatoes",
+    //   status: "New",
+    //   quantity: 10,
+    //   date: "May 2, 2024",
+    //   price: "235",
+    //   statusColor: "blue-product",
+    // },
+  ];
 
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Product = () => {
         if (!token) {
           console.log("User not logged in");
         }
-        const response = await fetch("http://192.168.9.90:8000/api/farmer/ordersPage", {
+        const response = await fetch("https://agrilinkapi.onrender.com/api/farmer/ordersPage", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
@@ -54,19 +54,19 @@ const Product = () => {
     "/src/assets/fam8.jpeg",
   ];
 
-  const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+  // const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-    const sampleOrders = Array.from({ length: 5 }, (_, index) => ({
-      id: index + 1,
-      name: ["John Doe", "Jane Smith", "Robert Brown", "Emily White", "David Johnson"][index],
-      product_name: ["Tomatoes", "Carrots", "Cabbages", "Peppers", "Onions"][index],
-      status: ["New", "New", "Delivered", "Canceled", "Pending"][index],
-      quantity: generateRandomNumber(1, 10),
-      date: `2025-03-${generateRandomNumber(10, 23)}`,
-      price: `$${generateRandomNumber(5, 50)}`,
-    }));
+  //   const sampleOrders = Array.from({ length: 5 }, (_, index) => ({
+  //     id: index + 1,
+  //     name: ["John Doe", "Jane Smith", "Robert Brown", "Emily White", "David Johnson"][index],
+  //     product_name: ["Tomatoes", "Carrots", "Cabbages", "Peppers", "Onions"][index],
+  //     status: ["New", "New", "Delivered", "Canceled", "Pending"][index],
+  //     quantity: generateRandomNumber(1, 10),
+  //     date: `2025-03-${generateRandomNumber(10, 23)}`,
+  //     price: `$${generateRandomNumber(5, 50)}`,
+  //   }));
   
-    const [orders, setOrders] = useState(sampleOrders);
+    // const [orders, setOrders] = useState(sampleOrders);
   
 
   return (
